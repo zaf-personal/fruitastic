@@ -1,0 +1,33 @@
+.bar-group .name-label {
+  text-anchor: end;
+  font-weight: 300;
+  font-size: 1em;
+  fill: #333;
+}
+
+.bar-group .value-label {
+  text-anchor: end;
+  fill: #fff;
+  font-weight: 900;
+  font-size: 0.7em;
+}
+
+.bar-container .bar-group {
+  transition: opacity 0.3s;
+}
+
+/* Fade bars when the chart is hovered */
+.bar-container .bar-group {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+/*.bar-container .bar-group:hover,*/
+.bar-container .bar-group.active {
+  opacity: 1;
+}
+
+/*.bar-container .bar-group:hover text,*/
+.bar-container .bar-group.active text {
+  font-weight: bold;
+}
