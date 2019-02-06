@@ -1,68 +1,26 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Fruitastic Exercise
 
-## Available Scripts
+This goal of this exercise is to take JSON data from an external source, and to visualize it into a simple UI.
 
-In the project directory, you can run:
+You'll be using the FruitasticAPI, which is a silly service that returns random people's favorite fruits as an array. It has one method: .get(callback) which accepts a function that is called with one parameter (JSON response) when the data is ready. Do not modify FruitasticApi.js.
 
-### `npm start`
+Use any library/framework you like and add whatever files you need. Style with CSS any way you like.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+A UX mockup is provided.
+  
+  
+##Design spec:
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+* Load data by calling FruitasticApi.get().
+* Create a horizontal bar chart (no more than 400px wide) that shows how popular each fruit is compared to the others. This should be based on the total number of favorites for each fruit. Each row should have a label for the name of the fruit, plus its total count. There's no need to show an axis with units on it.
+* Underneath the bar chart, display a list of all the items in the array you got from FruitasticApi.get(). Each item should display the person's name and favorite fruit.
+* Each bar chart should be click-able. when clicked, visually highlight the row and use console.log to output 'Fruit selected: {fruitname}, {fruitnameTotal}'
+* Do not cause a browser refresh, or navigate to another html page.
 
-### `npm test`
+  
+##Stretch goals! (optional):
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- When a bar chart row is clicked, the list should be filtered to only display the people that chose that fruit as their favorite.
+- Create an animation where the bars grow to their correct width when the data is loaded.
+- Stack each bar from top to bottom in order of most popular to least popular.
+- Each bar is a different color.
